@@ -1,15 +1,32 @@
-# Basic One-Way Example
+# React Module Federation: Host and Remote Demo
 
-This example demos a basic host application loading remote component.
+A small example of a host application loading a component exposed by a separate remote application using Webpack Module Federation.
 
-- `app1` is the host application.
-- `app2` standalone application which exposes `Button` component.
+## Project structure
 
-# Running Demo
+- `app1` — host application
+- `app2` — standalone remote application exposing a `Button` component
 
-Run `yarn start`. This will build and serve both `app1` and `app2` on ports 3001 and 3002 respectively.
+## Run locally
 
-- [localhost:3001](http://localhost:3001/) (HOST)
-- [localhost:3002](http://localhost:3002/) (STANDALONE REMOTE)
+Install dependencies using the package manager and lockfile maintained by this repository. Then run from the repository root:
 
-<img src="https://ssl.google-analytics.com/collect?v=1&t=event&ec=email&ea=open&t=event&tid=UA-120967034-1&z=1589682154&cid=ae045149-9d17-0367-bbb0-11c41d92b411&dt=ModuleFederationExamples&dp=/email/BasicRemoteHost">
+```bash
+yarn install
+yarn start
+```
+
+The documented development setup serves the host on port 3001 and the remote on port 3002.
+
+- Host: [http://localhost:3001](http://localhost:3001)
+- Remote: [http://localhost:3002](http://localhost:3002)
+
+## What to inspect
+
+- Remote component exposure and host consumption
+- Local development server configuration
+- How the remote URL is configured for the host
+
+## Limitations
+
+This is a basic one-way example, not a complete micro-frontend platform. Before deployment, define remote versioning, failure/loading behavior, shared dependency compatibility, origin/CORS rules, and a deployment strategy for independently released applications.
