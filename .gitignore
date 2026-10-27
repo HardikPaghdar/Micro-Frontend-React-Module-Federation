@@ -1,0 +1,14 @@
+node_modules/
+app1/node_modules/
+app2/node_modules/
+dist/
+build/
+coverage/
+.DS_Store
+._*
+.env
+.env.*
+!.env.example
+*.log
+.vscode/
+.idea/
